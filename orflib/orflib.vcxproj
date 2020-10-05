@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{72581843-1A16-446F-8B39-30D979A65AA4}</ProjectGuid>
+    <RootNamespace>orflib</RootNamespace>
+    <ProjectName>orflib</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)lib\$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)build\msbuild-$(PlatformTarget)-$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)-gd</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>$(ProjectName)-gd</TargetName>
+    <OutDir>$(SolutionDir)lib\$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)build\msbuild-$(PlatformTarget)-$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)lib\$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)build\msbuild-$(PlatformTarget)-$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)lib\$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)build\msbuild-$(PlatformTarget)-$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..;..\..\armadillo-9.700.2/include</AdditionalIncludeDirectories>
+      <ConformanceMode>true</ConformanceMode>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..;..\..\armadillo-9.700.2/include</AdditionalIncludeDirectories>
+      <ConformanceMode>true</ConformanceMode>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..;..\..\armadillo-9.700.2/include</AdditionalIncludeDirectories>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..;..\..\armadillo-9.700.2/include</AdditionalIncludeDirectories>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="defines.hpp" />
+    <ClInclude Include="exception.hpp" />
+    <ClInclude Include="market\market.hpp" />
+    <ClInclude Include="market\volatilitytermstructure.hpp" />
+    <ClInclude Include="market\yieldcurve.hpp" />
+    <ClInclude Include="math\interpol\interpolation1d.hpp" />
+    <ClInclude Include="math\interpol\piecewisepolynomial.hpp" />
+    <ClInclude Include="math\linalg\linalg.hpp" />
+    <ClInclude Include="math\matrix.hpp" />
+    <ClInclude Include="math\optim\polyfunc.hpp" />
+    <ClInclude Include="math\optim\roots.hpp" />
+    <ClInclude Include="math\random\normalrng.hpp" />
+    <ClInclude Include="math\random\primitivepolynomials.hpp" />
+    <ClInclude Include="math\random\rng.hpp" />
+    <ClInclude Include="math\random\sobolurng.hpp" />
+    <ClInclude Include="math\stats\errorfunction.hpp" />
+    <ClInclude Include="math\stats\meanvarcalculator.hpp" />
+    <ClInclude Include="math\stats\normaldistribution.hpp" />
+    <ClInclude Include="math\stats\statisticscalculator.hpp" />
+    <ClInclude Include="math\stats\univariatedistribution.hpp" />
+    <ClInclude Include="methods\montecarlo\eulerpathgenerator.hpp" />
+    <ClInclude Include="methods\montecarlo\mcparams.hpp" />
+    <ClInclude Include="methods\montecarlo\pathgenerator.hpp" />
+    <ClInclude Include="methods\pde\pde1dsolver.hpp" />
+    <ClInclude Include="methods\pde\pdebase.hpp" />
+    <ClInclude Include="methods\pde\pdegrid.hpp" />
+    <ClInclude Include="methods\pde\pdeparams.hpp" />
+    <ClInclude Include="methods\pde\pderesults.hpp" />
+    <ClInclude Include="methods\pde\tridiagonalops1d.hpp" />
+    <ClInclude Include="pricers\bsmcpricer.hpp" />
+    <ClInclude Include="products\barriercallput.hpp" />
+    <ClInclude Include="pricers\multiassetbsmcpricer.hpp" />
+    <ClInclude Include="pricers\ptpricers.hpp" />
+    <ClInclude Include="pricers\simplepricers.hpp" />
+    <ClInclude Include="products\americancallput.hpp" />
+    <ClInclude Include="products\asianbasketcallput.hpp" />
+    <ClInclude Include="products\europeancallput.hpp" />
+    <ClInclude Include="products\product.hpp" />
+    <ClInclude Include="sptr.hpp" />
+    <ClInclude Include="sptrmap.hpp" />
+    <ClInclude Include="utils.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="market\market.cpp" />
+    <ClCompile Include="market\volatilitytermstructure.cpp" />
+    <ClCompile Include="market\yieldcurve.cpp" />
+    <ClCompile Include="math\interpol\piecewisepolynomial.cpp" />
+    <ClCompile Include="math\linalg\choldcmp.cpp" />
+    <ClCompile Include="math\linalg\eigensym.cpp" />
+    <ClCompile Include="math\linalg\spectrunc.cpp" />
+    <ClCompile Include="math\random\sobolurng.cpp" />
+    <ClCompile Include="math\stats\errorfunction.cpp" />
+    <ClCompile Include="methods\montecarlo\pathgenerator.cpp" />
+    <ClCompile Include="methods\pde\pde1dsolver.cpp" />
+    <ClCompile Include="methods\pde\pdebase.cpp" />
+    <ClCompile Include="pricers\bsmcpricer.cpp" />
+    <ClCompile Include="pricers\multiassetbsmcpricer.cpp" />
+    <ClCompile Include="pricers\ptpricers.cpp" />
+    <ClCompile Include="pricers\simplepricers.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

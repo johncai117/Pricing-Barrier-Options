@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{23956DB5-0E6C-4434-9AD9-741BE4BCBB80}</ProjectGuid>
+    <RootNamespace>xlorflib</RootNamespace>
+    <ProjectName>xlorflib</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)build\msbuild-$(PlatformTarget)-$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)-gd</TargetName>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.xll</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>$(ProjectName)-gd</TargetName>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.xll</TargetExt>
+    <OutDir>$(SolutionDir)bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)build\msbuild-$(PlatformTarget)-$(Configuration)\$(ProjectName)\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)build\msbuild-$(PlatformTarget)-$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.xll</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.xll</TargetExt>
+    <OutDir>$(SolutionDir)bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)build\msbuild-$(PlatformTarget)-$(Configuration)\$(ProjectName)\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..;..\..\armadillo-9.700.2\include;..\..\xlw-5.0.2f0\xlw\include</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <ConformanceMode>true</ConformanceMode>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\lib\$(PlatformTarget)\;..\..\armadillo-9.700.2\lib\$(PlatformTarget)\;..\..\xlw-5.0.2f0\lib\$(PlatformTarget)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>orflib-gd.lib;lapack-gd.lib;blas-gd.lib;f2c-gd.lib;xlw-gd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ManifestFile />
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <ImportLibrary>$(SolutionDir)lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..;..\..\armadillo-9.700.2\include;..\..\xlw-5.0.2f0\xlw\include</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <ConformanceMode>true</ConformanceMode>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\lib\$(PlatformTarget)\;..\..\armadillo-9.700.2\lib\$(PlatformTarget)\;..\..\xlw-5.0.2f0\lib\$(PlatformTarget)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>orflib-gd.lib;lapack-gd.lib;blas-gd.lib;f2c-gd.lib;xlw-gd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ManifestFile />
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <ImportLibrary>$(SolutionDir)lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..;..\..\armadillo-9.700.2\include;..\..\xlw-5.0.2f0\xlw\include</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\lib\$(PlatformTarget)\;..\..\armadillo-9.700.2\lib\$(PlatformTarget)\;..\..\xlw-5.0.2f0\lib\$(PlatformTarget)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>orflib.lib;lapack.lib;blas.lib;f2c.lib;xlw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ManifestFile />
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <ImportLibrary>$(SolutionDir)lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..;..\..\armadillo-9.700.2\include;..\..\xlw-5.0.2f0\xlw\include</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\lib\$(PlatformTarget)\;..\..\armadillo-9.700.2\lib\$(PlatformTarget)\;..\..\xlw-5.0.2f0\lib\$(PlatformTarget)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>orflib.lib;lapack.lib;blas.lib;f2c.lib;xlw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ManifestFile />
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <ImportLibrary>$(SolutionDir)lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="xlfunctions0.cpp" />
+    <ClCompile Include="xlfunctions1.cpp" />
+    <ClCompile Include="xlfunctions2.cpp" />
+    <ClCompile Include="xlfunctions3.cpp" />
+    <ClCompile Include="xlfunctions4.cpp" />
+    <ClCompile Include="xlfunctions5.cpp" />
+    <ClCompile Include="xlregister0.cpp" />
+    <ClCompile Include="xlregister1.cpp" />
+    <ClCompile Include="xlregister2.cpp" />
+    <ClCompile Include="xlregister3.cpp" />
+    <ClCompile Include="xlregister4.cpp" />
+    <ClCompile Include="xlregister5.cpp" />
+    <ClCompile Include="xlutils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="xlutils.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
