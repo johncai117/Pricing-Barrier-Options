@@ -1,5 +1,7 @@
 # Pricing Barrier Options
 
+Authors: John Cai, Aarsh Sachdeva, Xiaoyu Liu, Kuishuai Yi
+
 Pricing Barrier Options using PDEs in C++.
 
 This was part of our project where we extended a C++ library to price barrier options using PDES. I was the lead developer for this project.
