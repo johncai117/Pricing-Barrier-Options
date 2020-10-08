@@ -17,16 +17,16 @@ For more explanation on the use, check out the explanation below.
 
 ## Explanation of Results
 
-<img src="Slides/1.png" alt="drawing" width="600"/>
+<img src="Slides/Slide1.png" alt="drawing" width="600"/>
 
-<img src="Slides/2.png" alt="drawing" width="600"/>
+<img src="Slides/Slide2.png" alt="drawing" width="600"/>
 
-<img src="Slides/3.png" alt="drawing" width="600"/>
+<img src="Slides/Slide3.png" alt="drawing" width="600"/>
 
-<img src="Slides/4.png" alt="drawing" width="600"/>
+<img src="Slides/Slide4.png" alt="drawing" width="600"/>
 
-<img src="Slides/5.png" alt="drawing" width="600"/>
+<img src="Slides/Slide5.png" alt="drawing" width="600"/>
 
-<img src="Slides/6.png" alt="drawing" width="600"/>
+<img src="Slides/Slide6.png" alt="drawing" width="600"/>
 
-<img src="Slides/7.png" alt="drawing" width="600"/>
+<img src="Slides/Slide7.png" alt="drawing" width="600"/>
