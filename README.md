@@ -13,7 +13,7 @@ To compile this file, you will need the relevant C++ libraies. You can email me 
 
 To just use it to price a barrier option, you can simply load the XLL SUBMISSION.xll file.
 
-For more explanation on the use, check out the explanation below.
+For more explanation on the use, check out the explanation below. Alternatively, check out the [link to the paper](https://www.academia.edu/44228698/Pricing_barrier_options_using_PDEs_in_C_)
 
 ## Explanation of Results
 
